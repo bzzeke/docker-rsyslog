@@ -1,6 +1,8 @@
-FROM i386/alpine:latest
+ARG arch=amd64
+FROM {$arch}/alpine:latest
 
 WORKDIR /app
+VOLUME /app
 
 USER root
 
