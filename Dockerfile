@@ -8,8 +8,7 @@ USER root
 
 RUN apk add --no-cache rsyslog supervisor
 
-COPY config/rsyslog.conf /etc/rsyslog.conf
-COPY config/supervisord.conf /etc/supervisord.conf
+ADD config/ /etc
 
 EXPOSE 514/tcp 514/udp
 
